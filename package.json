@@ -1,10 +1,10 @@
 {
-  "name": "jquery.findyourrep.ca",
+  "name": "jquery.findyourcandidate.ca",
   "version": "0.0.1",
   "author": "James McKinney, Open North Inc. <james@opennorth.ca>",
   "repository": {
       "type": "git",
-      "url": "https://github.com/opennorth/jquery-findyourrep-ca.git"
+      "url": "https://github.com/TheTyee/jquery-findyourcandidate-ca.git"
     },
   "devDependencies": {
     "bower": "~>1.2.8",

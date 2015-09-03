@@ -40,7 +40,7 @@ $.findYourRep.represent = function(address) {
 
 $.findYourRep.getTemplateContext = function(rep, api){
   return {
-    details: rep.elected_office + ', ' + rep.district_name,
+    details: rep.elected_office + ' for ' + rep.district_name,
     photoUrl: rep.photo_url,
     resultUrl: rep.url || rep.source_url,
     name: rep.name,
@@ -66,12 +66,21 @@ $.findYourRep.formTemplate = "" +
 
 $.findYourRep.resultsTemplate = "" +
 "<div class='fyr-results'>" +
-  "<h3>Your Representatives</h3>" +
+  "<h3>Your Candidates</h3>" +
   "<div class='fyr-represent cf' style='display:none;'>" +
     "<ul class='fyr-reps'></ul>" +
   "</div>" +
   "<a href='#' class='fyr-back'>&laquo; start over</a>" +
   "<small>Powered by <a href='https://represent.opennorth.ca/'>Represent</a></small>" +
 "</div>";
+
+$.findYourRep.resultTemplate = "" +
+  "<li class='fyr-rep cf'>" +
+    "<a href='{{ resultUrl }}' target='_top'>" +
+    "<img src='{{ photoUrl }}' alt='photo of'>" +
+    "<h4>{{ name }}</h4>" +
+    "<p class='fyr-details'>{{ party_name }} {{ details }}</p>" +
+    "</a>" +
+  "</li>";
 
 })(this);

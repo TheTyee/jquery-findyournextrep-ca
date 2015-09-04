@@ -1,8 +1,10 @@
-# Find Your Candidate Widget: Canada
+# Find Your Next Representative Widget: Canada
 
 A basic jQuery plugin that renders a form into the specified target, geocoding input (or geolocating the user) and displaying results from [Open North](http://opennorth.ca/)'s [Represent API](https://represent.opennorth.ca/).
 
 This plugin extends and reuses code from the [Sunlight Foundation](https://sunlightfoundation.com/)'s [jQuery Find-Your-Rep](https://github.com/sunlightlabs/jquery-findyourrep) plugin.
+
+This plugin is based entirely on the existing [Open North "Find your rep" widget](https://github.com/opennorth/jquery-findyourrep-ca) and has been updated to display Candidates for the upcoming Canadian federal election.
 
 ## Example
 

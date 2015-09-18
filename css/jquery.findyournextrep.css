@@ -1,0 +1,76 @@
+#candidates_info {
+    margin-top: 30px;
+    width: 100%;
+    float: left;
+}
+#candidates_info .individual {
+    width: 24%;
+    float: left;
+    padding-right: 1%;
+    position: relative;
+}
+#candidates_info .individual .candidate-top {
+    color: #fff;
+    background-color: #ccc;
+    padding: 10px;
+border: solid 1px #e5e5e5; }
+#candidates_info .individual .candidate-top .incumbent {
+    width: 0;
+    height: 0;
+    color: #000;
+    border-style: solid;
+    border-width: 0 80px 80px 0;
+    border-color: transparent #ffffff transparent transparent;
+    top: 1px;
+    right: 9px;
+position: absolute; }
+#candidates_info .individual .candidate-top .incumbent span {
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    -ms-transform: rotate(46deg);
+    /* IE 9 */
+    -webkit-transform: rotate(46deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(46deg); 
+}
+#candidates_info .individual .candidate-top .candidate-image {
+    height: 150px;
+    border-radius: 100%;
+    margin: 0 auto;
+display: block; }
+#candidates_info .individual .candidate-top h4 {
+    text-align: center;
+font-family: 'Open Sans', sans-serif; }
+#candidates_info .individual .conservative {
+background-color: #0c499c !important; }
+#candidates_info .individual .ndp {
+background-color: #f37021 !important; }
+#candidates_info .individual .liberal {
+background-color: #d71920 !important; }
+#candidates_info .individual .green-party {
+background-color: #3d9f3b !important; }
+
+.candidate-bottom {
+    border-bottom: solid 15px #e5e5e5;
+margin-bottom: 10px; }
+.candidate-bottom ul {
+    margin: 0px;
+padding: 0px; }
+.candidate-bottom ul li {
+list-style-type: none; }
+.candidate-bottom ul li a {
+    color: #fff;
+    border: solid 1px #e5e5e5;
+    display: block;
+    padding: 10px;
+    margin: 4px 0px;
+    text-align: center;
+    font-weight: bold;
+background: #bbb; }
+.candidate-bottom ul li a:hover {
+    background: white;
+    color: #999;
+text-decoration: none; } 
+

@@ -8,7 +8,8 @@
   ],
   "dependencies": {
     "jquery": "~>1.11.0",
-    "jquery-findyourrep": "git://github.com/sunlightlabs/jquery-findyourrep.git#0.0.2"
+    "jquery-findyourrep": "git://github.com/sunlightlabs/jquery-findyourrep.git#0.0.2",
+    "handlebars": "~4.0.2"
   },
   "devDependencies": {}
 }

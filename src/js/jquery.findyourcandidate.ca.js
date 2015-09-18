@@ -24,6 +24,12 @@
  */
 ;(function(window){
 
+$.findYourRep.render = function(template, data) {
+    var template = Handlebars.compile(template);
+    var results = template(data);
+    return results;
+};
+
 $.findYourRep.represent = function(address) {
   var dfd = new $.Deferred(),
       url = "https://represent.opennorth.ca/candidates/?limit=0&callback=?",
@@ -43,6 +49,9 @@ $.findYourRep.represent = function(address) {
 };
 
 $.findYourRep.getTemplateContext = function(rep, api){
+  var re = /(\s+)/;
+  var party = rep.party_name;
+  var party_slug = party.replace(re, '-').toLowerCase();
   return {
     details: rep.elected_office,
     photoUrl: rep.photo_url,
@@ -51,9 +60,14 @@ $.findYourRep.getTemplateContext = function(rep, api){
     district_name: rep.district_name,
     elected_office: rep.elected_office,
     source_url: rep.source_url,
+    personal_url: rep.personal_url,
     party_name: rep.party_name,
+    party_slug: party_slug,
     email: rep.email,
-    url: rep.url
+    facebook: rep.extra.facebook,
+    twitter: rep.extra.twitter,
+    url: rep.url,
+    incumbent: rep.incumbent
   };
 }
 
@@ -74,19 +88,28 @@ $.findYourRep.resultsTemplate = "" +
 "<div class='fyr-results'>" +
   "<h3></h3>" +
   "<div class='fyr-represent cf' style='display:none;'>" +
-    "<ul class='fyr-reps'></ul>" +
+    "<div id='candidates_info' class='fyr-reps'></div>" +
   "</div>" +
   "<a href='#' class='fyr-back'>&laquo; start over</a>" +
-  "<small>Powered by <a href='https://represent.opennorth.ca/'>Represent</a></small>" +
+  "<br /><br /><small>Powered by <a href='https://represent.opennorth.ca/'>Represent</a></small>" +
 "</div>";
 
 $.findYourRep.resultTemplate = "" +
-  "<li class='fyr-rep cf'>" +
-    "<a href='{{ resultUrl }}' target='_top'>" +
-    "<img src='{{ photoUrl }}' alt='photo of'>" +
+    "<div class='individual'>" +
+    "<div class='candidate-top {{ party_slug }}'>" +
+    "<div class='party-logo'><img height='20' alt='{{ party_name }}' src='{{ party_slug }}-white.png'></div>" +
+    "{{#if incumbent}}<div class='incumbent'><span>Incumbent</span></div>{{/if}}" +
+    "<img class='candidate-image' src='{{ photoUrl }}'>" + 
     "<h4>{{ name }}</h4>" +
-    "<p class='fyr-details'>{{ party_name }} {{ details }}</p>" +
-    "</a>" +
-  "</li>";
+    "</div>" +
+    "<div class='candidate-bottom'>" +
+    "    <ul>" +
+    "        {{#if website}}<li><a href='{{ website }}'>Website</a></li>{{/if}}" +
+    "        {{#if email}}<li><a href='mailto:{{ email }}'>Email</a></li>{{/if}}" +
+    "        {{#if twitter}}<li><a href='{{ twitter }}'>Twitter</a></li>{{/if}}" +
+    "        {{#if facebook}}<li><a href='{{ facebook }}'>Facebook</a></li>{{/if}}" +
+    "    </ul>" +
+    "</div>" +
+    "</div>";
 
 })(this);

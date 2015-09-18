@@ -32,6 +32,10 @@ $.findYourRep.represent = function(address) {
   $.findYourRep.geocodeOrResolveImmediately(address).done(function(geocoded){
     params.point = geocoded.latitude + ',' + geocoded.longitude;
     $.findYourRep.apiCall(url, params).done(function(data){
+        dfd.then(function(data) {
+            $('.fyr-results h3').append($.findYourRep.render($.findYourRep.districtTemplate,
+                $.findYourRep.getTemplateContext(data[0], {})));
+        });
       dfd.resolve(data['objects']);
     });
   });
@@ -40,11 +44,11 @@ $.findYourRep.represent = function(address) {
 
 $.findYourRep.getTemplateContext = function(rep, api){
   return {
-    details: rep.elected_office + ' for ' + rep.district_name,
+    details: rep.elected_office,
     photoUrl: rep.photo_url,
     resultUrl: rep.url || rep.source_url,
     name: rep.name,
-    distric_name: rep.distric_name,
+    district_name: rep.district_name,
     elected_office: rep.elected_office,
     source_url: rep.source_url,
     party_name: rep.party_name,
@@ -52,6 +56,8 @@ $.findYourRep.getTemplateContext = function(rep, api){
     url: rep.url
   };
 }
+
+$.findYourRep.districtTemplate = "Your Candidates for {{ district_name }}";
 
 $.findYourRep.formTemplate = "" +
   "<div class='find-your-rep fyr-container' id='fyr{{ idx }}' data-apis='{{ apis }}'>" +
@@ -66,7 +72,7 @@ $.findYourRep.formTemplate = "" +
 
 $.findYourRep.resultsTemplate = "" +
 "<div class='fyr-results'>" +
-  "<h3>Your Candidates</h3>" +
+  "<h3></h3>" +
   "<div class='fyr-represent cf' style='display:none;'>" +
     "<ul class='fyr-reps'></ul>" +
   "</div>" +

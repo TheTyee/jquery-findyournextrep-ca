@@ -24,6 +24,7 @@
  */
 ;(function(window){
 
+// Override the render method
 $.findYourRep.render = function(template, data) {
     var template = Handlebars.compile(template);
     var results = template(data);
@@ -38,10 +39,11 @@ $.findYourRep.represent = function(address) {
   $.findYourRep.geocodeOrResolveImmediately(address).done(function(geocoded){
     params.point = geocoded.latitude + ',' + geocoded.longitude;
     $.findYourRep.apiCall(url, params).done(function(data){
-        dfd.then(function(data) {
+      // TODO this is a silly way to do this. Re-think! (Or just think.)
+      dfd.then(function(data) {
             $('.fyr-results h3').append($.findYourRep.render($.findYourRep.districtTemplate,
                 $.findYourRep.getTemplateContext(data[0], {})));
-        });
+      });
       dfd.resolve(data['objects']);
     });
   });

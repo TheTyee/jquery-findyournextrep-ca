@@ -114,6 +114,10 @@ Progressively enhance for larger screens
         padding-right: 1%;
         min-height: 430px;
     }
+    #candidates_info .individual .candidate-top .incumbent {
+        top: 1px;
+        right: 9px;
+    }
 }
 @media screen and (min-width: 1025px) {
     /* Adjust for large desktop */
@@ -122,6 +126,10 @@ Progressively enhance for larger screens
         float: left;
         padding-right: 1%;
         min-height: 430px;
+    }
+    #candidates_info .individual .candidate-top .incumbent {
+        top: 1px;
+        right: 15px;
     }
 
 }

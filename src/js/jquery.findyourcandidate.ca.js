@@ -99,7 +99,7 @@ $.findYourRep.resultsTemplate = "" +
 $.findYourRep.resultTemplate = "" +
     "<div class='individual'>" +
     "<div class='candidate-top {{ party_slug }}'>" +
-    "<div class='party-logo'><img height='20' alt='{{ party_name }}' src='{{ party_slug }}-white.png'></div>" +
+    "<div class='party-logo'><img height='20' alt='{{ party_name }}' src='https://cdn.rawgit.com/TheTyee/jquery-findyournextrep-ca/gh-pages/{{ party_slug }}-white.png'></div>" +
     "{{#if incumbent}}<div class='incumbent'><span>Incumbent</span></div>{{/if}}" +
     "<img class='candidate-image' src='{{ photoUrl }}'>" + 
     "<h4>{{ name }}</h4>" +

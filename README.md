@@ -6,6 +6,8 @@ The form and the result listing are designed to be mobile-first and responsive, 
 
 This plugin extends and reuses code from the [Sunlight Foundation](https://sunlightfoundation.com/)'s [jQuery Find-Your-Rep](https://github.com/sunlightlabs/jquery-findyourrep) plugin and is based entirely on the existing [Open North "Find your rep" widget](https://github.com/opennorth/jquery-findyourrep-ca). It has been updated to display Candidates for the upcoming 2015 Canadian federal election and to work well on mobile devices.
 
+[Sally Poulsen](https://github.com/kidcompassion) is responsible for the idea, and the updated visual style. [Phillip Smith](https://github.com/phillipadsmith) provided updates to the Open North plugin.
+
 ## Example
 
 Try the [demo](http://thetyee.github.io/jquery-findyourcandidate-ca/) (a good test address is `A1A1A1` for St. John's, NL). The full example code (without the automatic user location lookup) is:

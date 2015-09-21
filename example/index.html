@@ -21,6 +21,27 @@
                      text: 'Enter your address or postal code to see who might represent you.',
                      action: 'Go!'
                  });
+            // Try to automatically find the user
+            // This is very cheeky and most definitly a kludge,
+            // and I'm sure James won't like it.
+            // Yet, it avoids the need to add this to jquery.findyourrep.js
+            if (navigator.geolocation) {
+                var geocoder = new google.maps.Geocoder();
+                $('div.fyr-container p').append('<span class="geolocate"> Or <a href="#" id="geolocate">click here</a> and we can try to find you automatically</span>');
+                $('#geolocate').click(function (e) {
+                    e.preventDefault();
+                    $('#fyr > div > textarea').val('Looking up your location... please wait');
+                    $('#fyr > div > textarea').prop( "disabled", true );
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var geolocateLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+                        geocoder.geocode({'latLng': geolocateLatLng},
+                                         function(results, status) {
+                                             $('#fyr > div > textarea').val(results[0].formatted_address);
+                                             $('#fyr > div > button').trigger('click');
+                                         });
+                    });
+                });
+            }
     </script>
 </body>
 </html>

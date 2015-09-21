@@ -12,6 +12,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'src/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'dist/css',
+          ext: '.min.css'
+        }]
+      }
+    },
     connect: {
       server: {
         options: {
@@ -31,7 +42,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['uglify']);
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.registerTask('default', ['uglify', 'cssmin']);
   grunt.registerTask('watch', ['watch']);
-  grunt.registerTask('demo', ['uglify', 'connect']);
+  grunt.registerTask('demo', ['uglify', 'cssmin', 'connect']);
 };

@@ -13,7 +13,7 @@ This plugin extends and reuses code from the [Sunlight Foundation](https://sunli
 
 * [Open North](http://www.opennorth.ca/) provide the [candidate data](http://represent.opennorth.ca/)
 * [Tyee Solutions Society](http://www.tyeesolutions.org/) provided updates to the candidates contact information, specifically reporter Jes Hovanes
-* [Sally Poulsen](https://github.com/kidcompassion) lead the charge and the updated visual style
+* [Sally Poulsen](https://github.com/kidcompassion) led the charge and the updated visual style
 * [Phillip Smith](https://github.com/phillipadsmith) provided updates to the Open North plugin
 
 ## Show me the demo!

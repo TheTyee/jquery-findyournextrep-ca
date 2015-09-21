@@ -1,6 +1,6 @@
 {
-  "name": "jquery.findyourcandidate.ca",
-  "version": "0.0.1",
+  "name": "jquery-findyournextrep-ca",
+  "version": "1.0.0",
   "ignore": [
     ".jshintrc",
     "**/*.txt",

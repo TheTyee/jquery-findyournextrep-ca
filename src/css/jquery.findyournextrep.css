@@ -1,31 +1,29 @@
-.find-your-rep {
+#fyr {
     font-family: 'Open Sans', sans-serif;
 }
-#candidates_info {
+.fyr-reps {
     margin-top: 30px;
-    /*width: 100%;*/
-    /*float: left;*/
 }
-#candidates_info .individual .candidate-top .candidate-image {
+.fyr-reps .individual .candidate-top .candidate-image {
     height: 150px;
     border-radius: 100%;
     margin: 0 auto;
     display: block;
 }
-#candidates_info .individual {
+.fyr-reps .individual {
     /*width: 24%;*/
     /*float: left;*/
     /*padding-right: 1%;*/
     position: relative;
     padding-bottom: 20px;
 }
-#candidates_info .individual .candidate-top {
+.fyr-reps .individual .candidate-top {
     color: #fff;
     background-color: #ccc;
     padding: 10px;
     border: solid 1px #e5e5e5;
 }
-#candidates_info .individual .candidate-top .incumbent {
+.fyr-reps .individual .candidate-top .incumbent {
     width: 0;
     height: 0;
     color: #000;
@@ -36,7 +34,7 @@
     right: 1px;
     position: absolute;
 }
-#candidates_info .individual .candidate-top .incumbent span {
+.fyr-reps .individual .candidate-top .incumbent span {
     font-size: .8em;
     position: absolute;
     top: 20px;
@@ -47,19 +45,19 @@
     /* Chrome, Safari, Opera */
     transform: rotate(46deg);
 }
-#candidates_info .individual .candidate-top h4 {
+.fyr-reps .individual .candidate-top h4 {
     text-align: center;
 }
-#candidates_info .individual .conservative {
+.fyr-reps .individual .conservative {
     background-color: #0c499c !important;
 }
-#candidates_info .individual .ndp {
+.fyr-reps .individual .ndp {
     background-color: #f37021 !important; 
 }
-#candidates_info .individual .liberal {
+.fyr-reps .individual .liberal {
     background-color: #d71920 !important;
 }
-#candidates_info .individual .green-party {
+.fyr-reps .individual .green-party {
     background-color: #3d9f3b !important; 
 }
 
@@ -90,60 +88,175 @@
     text-decoration: none;
 }
 
+.find-a-candidate h3, p, div {
+    padding: 0px;
+    margin: 0px;
+}
+.find-a-candidate h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.find-a-candidate .widget-inputs {
+    background: #aaa7a7;
+    color: #fff;
+    padding: 20px 20px 20px 20px;
+}
+.find-a-candidate .widget-inputs a {
+    color: #fff;
+}
+.find-a-candidate form {
+    margin-top: 20px;
+}
+
+.find-a-candidate .form-control {
+    display: block;
+    width: 97%;
+    height: 34px;
+    padding: 10px 0px 0px 10px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.find-a-candidate form .widget_field {
+    /*padding: 4px; */
+}
+.find-a-candidate form button {
+    border: none;
+    padding: 8px 0px;
+    color: #fff;
+    /*font-family: "Open Sans", arial, sans-serif;*/
+    margin-top: 20px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 99%;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.find-a-candidate form label {
+    /*position: absolute;*/
+    /*background: #cb0030;*/
+    /*top: -70px;*/
+    /*text-align: center;*/
+    /*font-weight: normal;*/
+    /*padding: 10px;*/
+    /*border: 4px solid #cb0030; */
+}
+.find-a-candidate form label:after, .find-a-candidate form label:before {
+    /*top: 100%;*/
+    /*left: 50%;*/
+    /*border: solid transparent;*/
+    /*content: " ";*/
+    /*height: 0;*/
+    /*width: 0;*/
+    /*position: absolute;*/
+    /*pointer-events: none; */
+}
+.find-a-candidate form label:after {
+    /*border-color: rgba(136, 183, 213, 0);*/
+    /*border-top-color: #cb0030;*/
+    /*border-width: 10px;*/
+    /*margin-left: -10px; */
+}
+.find-a-candidate form label:before {
+    /*border-color: rgba(194, 225, 245, 0);*/
+    /*border-top-color: #cb0030;*/
+    /*border-width: 16px;*/
+    /*margin-left: -16px; */
+}
+.find-a-candidate .widget-credit {
+    font-size: 0.75em;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 0px 15px 20px;
+}
+.find-a-candidate .widget-credit img {
+    max-height: 30px;
+    position: relative;
+    top: 11px;
+}
+.find-a-candidate input[type=text] {
+    color: #000; 
+}
+
 
 /* ==========================================================================
 Progressively enhance for larger screens 
 ========================================================================== */
-/*iPhone < 5:*/
-@media screen and (device-aspect-ratio: 2/3) {
+    /*iPhone < 5:*/
+    @media screen and (device-aspect-ratio: 2/3) {
 
-}
-/*iPhone 5:*/
-@media screen and (device-aspect-ratio: 40/71) {
-
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    /* portrait tablets */
-
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Adjust for small desktop, wide portrait */
-    #candidates_info .individual {
-        width: 49%;
-        float: left;
-        padding-right: 1%;
-        min-height: 430px;
     }
-    #candidates_info .individual .candidate-top .incumbent {
-        top: 1px;
-        right: 9px;
-    }
-}
-@media screen and (min-width: 1025px) {
-    /* Adjust for large desktop */
-    #candidates_info .individual {
-        width: 24%;
-        float: left;
-        padding-right: 1%;
-        min-height: 430px;
-    }
-    #candidates_info .individual .candidate-top .incumbent {
-        top: 1px;
-        right: 15px;
-    }
+    /*iPhone 5:*/
+    @media screen and (device-aspect-ratio: 40/71) {
 
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    /* Put high-resolution display styles here */
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        /* portrait tablets */
 
-}
-/* Large devices (large desktops, 1200px and up) */
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        /* Adjust for small desktop, wide portrait */
+        .fyr-reps .individual {
+            width: 49%;
+            float: left;
+            padding-right: 1%;
+            min-height: 430px;
+        }
+        .fyr-reps .individual .candidate-top .incumbent {
+            top: 1px;
+            right: 9px;
+        }
+    }
+    @media screen and (min-width: 1025px) {
+        /* Adjust for large desktop */
+        .fyr-reps .individual {
+            width: 24%;
+            float: left;
+            padding-right: 1%;
+            min-height: 430px;
+        }
+        .fyr-reps .individual .candidate-top .incumbent {
+            top: 1px;
+            right: 15px;
+        }
 
-/* ==========================================================================
-Print styles.
-Should be inlined to avoid required HTTP connection: h5bp.com/r
-========================================================================== */
-@media print {
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        /* Put high-resolution display styles here */
+
+    }
+    /* Large devices (large desktops, 1200px and up) */
+
+    /* ==========================================================================
+    Print styles.
+    Should be inlined to avoid required HTTP connection: h5bp.com/r
+    ========================================================================== */
+    @media print {
         * {
             background: transparent !important;
             color: #000 !important;

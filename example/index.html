@@ -17,7 +17,7 @@
                  .find('div.fyr')
                  .findYourRep({
                      apis: 'represent',
-                     title: 'Find Your Candidates',
+                     title: 'Find federal candidates in your riding',
                      text: 'Enter your address or postal code to see who might represent you.',
                      action: 'Go!'
                  });
@@ -27,17 +27,17 @@
             // Yet, it avoids the need to add this to jquery.findyourrep.js
             if (navigator.geolocation) {
                 var geocoder = new google.maps.Geocoder();
-                $('div.fyr-container p').append('<span class="geolocate"> Or <a href="#" id="geolocate">click here</a> and we can try to find you automatically</span>');
+                $('.fyr-container label').append('<span class="geolocate"> Or <a href="#" id="geolocate">click here</a> and we can try to find you automatically</span>');
                 $('#geolocate').click(function (e) {
                     e.preventDefault();
-                    $('#fyr > div > textarea').val('Looking up your location... please wait');
-                    $('#fyr > div > textarea').prop( "disabled", true );
+                    $('.fyr > textarea').val('Looking up your location... please wait');
+                    $('.fyr > textarea').prop( "disabled", true );
                     navigator.geolocation.getCurrentPosition(function(position) {
                         var geolocateLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
                         geocoder.geocode({'latLng': geolocateLatLng},
                                          function(results, status) {
-                                             $('#fyr > div > textarea').val(results[0].formatted_address);
-                                             $('#fyr > div > button').trigger('click');
+                                             $('.fyr >  textarea').val(results[0].formatted_address);
+                                             $('button.fyr-submit').trigger('click');
                                          });
                     });
                 });

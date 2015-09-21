@@ -1,16 +1,24 @@
 # Find Your Next Representative Widget: Canada
 
+
+## Nerdy Overview
+
 A basic jQuery plugin that renders a form into the specified target, geocoding input (or geolocating the user) and displaying results from [Open North](http://opennorth.ca/)'s [Represent API](https://represent.opennorth.ca/).
 
 The form and the result listing are designed to be mobile-first and responsive, so they should integrate well into mobile-friendly sites.
 
+## Credits
+
 This plugin extends and reuses code from the [Sunlight Foundation](https://sunlightfoundation.com/)'s [jQuery Find-Your-Rep](https://github.com/sunlightlabs/jquery-findyourrep) plugin and is based entirely on the existing [Open North "Find your rep" widget](https://github.com/opennorth/jquery-findyourrep-ca). It has been updated to display Candidates for the upcoming 2015 Canadian federal election and to work well on mobile devices.
 
-[Sally Poulsen](https://github.com/kidcompassion) is responsible for the idea, and the updated visual style. [Phillip Smith](https://github.com/phillipadsmith) provided updates to the Open North plugin.
+* [Sally Poulsen](https://github.com/kidcompassion) is responsible for the idea, and the updated visual style.
+* [Phillip Smith](https://github.com/phillipadsmith) provided updates to the Open North plugin.
 
-## Example
+## Show me the demo!
 
-Try the [demo](http://thetyee.github.io/jquery-findyourcandidate-ca/) (a good test address is `A1A1A1` for St. John's, NL). The full example code (without the automatic user location lookup) is:
+Try the [demo](http://thetyee.github.io/jquery-findyournextrep-ca/) (a good test address is `A1A1A1` for St. John's, NL). 
+
+The full example code (without the automatic user location lookup) is:
 
 ```html
 <!doctype html>

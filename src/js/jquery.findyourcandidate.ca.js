@@ -76,24 +76,28 @@ $.findYourRep.getTemplateContext = function(rep, api){
 $.findYourRep.districtTemplate = "Your Candidates for {{ district_name }}";
 
 $.findYourRep.formTemplate = "" +
-  "<div class='find-your-rep fyr-container' id='fyr{{ idx }}' data-apis='{{ apis }}'>" +
-    "<h3>{{ title }}</h3>" +
-    "<p>{{ text }}</p>" +
-    "<div class='fyr-controls'>" +
-      "<textarea placeholder='Enter your address'>{{ defaultValue }}</textarea>" +
-      "<button class='fyr-submit'>{{ action }}</button>" +
-      "</div>" +
-      "<small>Powered by <a href='https://represent.opennorth.ca/'>Represent</a></small>" +
-  "</div>";
+    "<div class='find-a-candidate find-your-rep fyr-container' id='fyr{{ idx }}' data-apis='{{ apis }}'>" +
+    "   <aside class='widget-credit'>Powered by <a href='https://represent.opennorth.ca/' target='_blank'><img src='http://dev.housingfix.tyeesolutions.org/images/logos/open_north_rev.png'></a>" +
+    "   </aside>" +
+    "   <div class='widget-inputs'>" +
+    "   <h3>{{ title }}</h3>" +
+    "   <label for='address'>{{ text }}</label>" +
+    "  <div class='fyr-controls'>" +
+    "   <form class='fyr'>" +
+    "       <textarea name='address' class='widget-field form-control' placeholder='Enter your address or postal code' required>{{ defaultValue }}</textarea>" +
+    "       <button class='fyr-submit'>{{ action }}</button>" +
+    "   </form>" +
+    "   </div>" +
+    "</div>";
 
 $.findYourRep.resultsTemplate = "" +
 "<div class='fyr-results'>" +
   "<h3></h3>" +
   "<div class='fyr-represent cf' style='display:none;'>" +
-    "<div id='candidates_info' class='fyr-reps'></div>" +
+    "<div class='fyr-reps'></div>" +
   "</div>" +
   "<a href='#' class='fyr-back'>&laquo; start over</a>" +
-  "<br /><br /><small>Powered by <a href='https://represent.opennorth.ca/'>Represent</a></small>" +
+  "<br /><br /><small>Powered by OpenNorth's <a href='https://represent.opennorth.ca/'>Represent</a></small>" +
 "</div>";
 
 $.findYourRep.resultTemplate = "" +

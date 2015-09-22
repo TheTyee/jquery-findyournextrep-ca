@@ -12,7 +12,7 @@ The form and the result listing are designed to be mobile-first and responsive, 
 This plugin extends and reuses code from the [Sunlight Foundation](https://sunlightfoundation.com/)'s [jQuery Find-Your-Rep](https://github.com/sunlightlabs/jquery-findyourrep) plugin and is based entirely on the existing [Open North "Find your rep" widget](https://github.com/opennorth/jquery-findyourrep-ca). It has been updated to display Candidates for the upcoming 2015 Canadian federal election and to work well on mobile devices.
 
 * [Open North](http://www.opennorth.ca/) provide the [candidate data](http://represent.opennorth.ca/)
-* [Tyee Solutions Society](http://www.tyeesolutions.org/) provided updates to the candidates contact information, specifically reporter Jes Hovanes
+* [Tyee Solutions Society](http://www.tyeesolutions.org/) (Jes Hovanes and Farah Tarannum) and [OpenMedia] (http://openmedia.org) provided updates to the candidate contact information.
 * [Sally Poulsen](https://github.com/kidcompassion) led the charge and the updated visual style
 * [Phillip Smith](https://github.com/phillipadsmith) provided updates to the Open North plugin
 

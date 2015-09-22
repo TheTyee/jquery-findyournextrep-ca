@@ -31,7 +31,7 @@ The full example code (without the automatic user location lookup) is:
         <link rel="stylesheet" href="https://cdn.rawgit.com/TheTyee/jquery-findyournextrep-ca/release/v1.0.0/dist/css/jquery.findyournextrep.min.css" />
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
         <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.2/handlebars.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.2/handlebars.min.js"></script>
         <script src="https://cdn.rawgit.com/TheTyee/jquery-findyournextrep-ca/release/v1.0.0/dist/js/jquery.findyourrep-pack.min.js"></script>
         <script src="https://cdn.rawgit.com/TheTyee/jquery-findyournextrep-ca/release/v1.0.0/dist/js/jquery.findyourcandidate.ca.min.js"></script>
     </head>
